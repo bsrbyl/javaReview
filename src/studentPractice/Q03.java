@@ -38,7 +38,7 @@ public class Q03 {
           if (kalanHak>0){
               System.out.println("yanlis girdiniz kalan hakkiniz : "+kalanHak);
           }else if(kalanHak==0){
-              System.out.println(" giris hakkiniz tukendi");
+              System.out.println(" giris hakkiniz tukendi. lutfen daha sonra tekrar deneyiniz");
           }
 
       }while ((kalanHak>0));
