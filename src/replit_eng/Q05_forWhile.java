@@ -1,5 +1,9 @@
 package replit_eng;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Q05_forWhile {
     public static void main(String[] args) {
         /*
@@ -7,15 +11,30 @@ public class Q05_forWhile {
 
 OUTPUT : Even Numbers from 100 to 0 are: 20 18 16 14 12 10 8 6 4 2 0
          */
-String sonuc ="";
-        for (int i =0; i <=20 ; i++) {
-            if (i%2==0){
-                sonuc=i+" ";
-                System.out.print(sonuc+" ");
-            }
-        }
-        for (int i = 0; i <sonuc.length() ; i++) {
 
+
+    int sayi=20;
+    int sonsayi=0;
+
+        int sayac=(sayi/2)+1;
+
+        int[] yenilist= new int[sayac];
+
+        while (sayac>0) {
+
+            for (int i = 0; i <= sayi; i++) {
+                if (i % 2 == 0) {
+
+                    yenilist[sayac-1]+=i;
+                    sayac--;
+
+                }
+            }
+            System.out.println(Arrays.toString(yenilist));
+        }
+        for (int i = 0; i <yenilist.length ; i++) {
+            sonsayi=yenilist[i];
+            System.out.print(sonsayi+" ");
         }
 
     }
