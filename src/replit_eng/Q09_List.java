@@ -28,7 +28,8 @@ Output: maximum occurring character is : a
             }
             if (counter>maxCounter){
                 maxCounter=counter;
-                enCokYazilan.add(input.substring(i,i+1));
+
+                enCokYazilan.set(0,input.substring(i,i+1));
 
             }else if(counter==maxCounter){
 
