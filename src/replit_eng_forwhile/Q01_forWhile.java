@@ -1,4 +1,4 @@
-package replit_eng;
+package replit_eng_forwhile;
 
 import java.util.Scanner;
 

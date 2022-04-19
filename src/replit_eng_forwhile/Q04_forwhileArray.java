@@ -1,4 +1,4 @@
-package replit_eng;
+package replit_eng_forwhile;
 
 public class Q04_forwhileArray {
     public static void main(String[] args) {
