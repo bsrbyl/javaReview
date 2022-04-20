@@ -40,6 +40,8 @@ Output: maximum occurring character is : a
         }
 
         System.out.println(enCokYazilan);
+        String c=enCokYazilan.get(0);
+        System.out.println(c);
 
     }
 }
