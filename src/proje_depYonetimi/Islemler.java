@@ -7,9 +7,6 @@ import java.util.Scanner;
 public class Islemler {
     static Scanner scan = new Scanner(System.in);
     public static int id=100;
-    public static int rafaTanimla=1;
-
-
     public static List<DepoYonetimi> urunlerListesi = new ArrayList<>();
     public static int raf;
 
@@ -49,12 +46,10 @@ public class Islemler {
                 break;
 
             default:
-                System.out.println("Hatali yaptiniz...");
+                System.out.println("Hatali bir giris yaptiniz...");
                 baslangic();
+                break;
         }
-
-
-
 
     }
 
@@ -72,10 +67,9 @@ public class Islemler {
             if (each.id==cikisId){
                 System.out.println("Cikilacak urun miktarini giriniz : ");
                 int kacMiktar=scan.nextInt();
-                if (kacMiktar>0){
+                if (kacMiktar>0 && kacMiktar<each.miktar){
                     each.miktar-=kacMiktar;
-
-                }else System.out.println("gecerli bir miktar giriniz. ");
+                }else System.out.println(" Yeterli urun olmadigi icin cikis yapilamadi. ");
                 cikisDogruMu=true;
                 break;
             }
@@ -83,43 +77,31 @@ public class Islemler {
     }
 
     public static void urunuRafaKoy() {
-       if (rafaTanimla==2){
-           for (int i = 0; i <= 10; i++) {
-               if (String.valueOf(urunlerListesi.get(urunlerListesi.size()-1)).substring((String.valueOf(String.valueOf(urunlerListesi.get(urunlerListesi.size()-1))).length() - 1)).equals(i)) {
-                           raf = i+1;
 
 
-                       }
-                   }
+        boolean rafaKoyduMu=false;
+        urunListele();
+        System.out.println("Lutfen urun listesinden gecerli bir id giriniz: ");
+        int girisId= scan.nextInt();
 
-       }else {
-           urunListele();
-           System.out.println("Lutfen urun listesinden gecerli bir id giriniz: ");
-           int girisId = scan.nextInt();
-
-           for (DepoYonetimi each : urunlerListesi
-           ) {
-               if (each.id == girisId) {
-                   for (int i = 1; i <= 10; i++) {
-                       if (String.valueOf(each).substring((String.valueOf(each).length() - 1)).equals(i)) {
-                           raf = i;
-
-                           break;
-                       }
-                   }
-
-                   // each.raf= scan.nextInt();
-                   // urunlerListesi.add(each);
-
-               } else
-                   System.out.println("Urun bulunamadigi icin rafa kaldirilmadi.");
-               break;
-           }
+        for (DepoYonetimi each : urunlerListesi
+        ) {
+            if (each.id==girisId){
+                System.out.println("Urunu koymak istediginiz rafi seciniz ");
+                each.raf= scan.nextInt();
+                rafaKoyduMu=true;
+                urunListele();
+                break;
+                //}else if (each.id!=girisId){
+                //  System.out.println("Urun bulunamadigi icin rafa kaldirilmadi.");
+            }
+            if (each.id!=girisId){
+                System.out.println("Urun bulunamadigi icin rafa kaldirilmadi");
+            }
+        }
 
 
-       }
-
-
+        baslangic();
     }
 
 
@@ -143,7 +125,6 @@ public class Islemler {
                 break;
             }
         }
-
 
     }
 
@@ -178,12 +159,6 @@ public class Islemler {
             DepoYonetimi obj = new DepoYonetimi(id,urunAdi,uretici,birim,raf);
             urunlerListesi.add(obj);
             id++;
-            if (rafaTanimla==1){
-              rafaTanimla++;
-                urunuRafaKoy();
-               rafaTanimla--;
-            }
-
             System.out.println("Urun girisini bitirmek istiyorsaniz 0'a basiniz devam etmek istiyorsaniz 1'e basiniz ");
             int devam=scan.nextInt();
             if (devam==1){
@@ -198,5 +173,4 @@ public class Islemler {
 
         return urunlerListesi;
     }
-
 }
