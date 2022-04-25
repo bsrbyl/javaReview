@@ -3,6 +3,45 @@ package replit_eng_forwhile;
 import java.util.Scanner;
 
 public class Cons2 {
+static Scanner scan= new Scanner(System.in);
+
+    String isim="";
+  String soyIsim="";
+   int ogrenciNo=0;
+    static String soyIsim2="";
+
+
+
+    public Cons2(){
+
+   }
+    public Cons2(String isim, String soyIsim, int ogrenciNo) {
+        this.isim = isim;
+        this.soyIsim = soyIsim;
+        this.ogrenciNo = ogrenciNo;
+    }
+
+    public String getIsim() {
+        return isim;
+    }
+
+    public int getOgrenciNo() {
+        return ogrenciNo;
+    }
+
+    public String getSoyIsim() {
+
+        return soyIsim;
+    }
+
+    public void setSoyIsim(String soyIsim) {
+
+
+           this.soyIsim =soyIsim2;
+
+
+    }
+
     public static void main(String[] args) {
         /*
         Create a student's variables in the main method and
@@ -21,21 +60,32 @@ public class Cons2 {
        Yöntemde, kullanıcıdan yeni bir soyadı girmesini ve eski soyadını değiştirmesini isteyin (yani can).
          */
 
-        String isim="";
-        String soyIsim="";
-        int ogrenciNo=0;
-        Changename(isim,soyIsim,ogrenciNo);
+        System.out.println("lutfen bilgileri doldurunuz: isim : ,soyisim : ,ogrenci no :");
+        Cons2 obj = new Cons2();
+      obj.isim=scan.nextLine();
+        obj.soyIsim=scan.nextLine();
+       obj.ogrenciNo=scan.nextInt();
+        Changename();
 
+        System.out.println(obj.toString());
     }
 
-    public Cons2() {
+
+    @Override
+    public String toString() {
+        return "Cons2{" +
+                "isim='" + isim + '\'' +
+                ", soyIsim='" + soyIsim2+ '\'' +
+                ", ogrenciNo=" + ogrenciNo +
+                '}';
     }
 
-    private static void Changename(String isim, String soyIsim, int ogrenciNo) {
+    public static String Changename() {
 
-        Scanner scan= new Scanner(System.in);
-        System.out.println("lutfen bilgileri doldurunuz: ");
+       scan.nextLine();
+        System.out.println("lutfen yeni soyisminizi girin :");
 
-
+        soyIsim2=scan.nextLine();
+        return soyIsim2;
     }
 }
