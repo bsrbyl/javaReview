@@ -2,14 +2,14 @@ package replit_eng_forwhile;
 
 public class Cons3 {
     /*
-    Create 2 constructors one is with parameters, the other one is without parameter.
-     By using that constructors create at least 2 objects then print their features on the console.
-     Biri parametreli, diğeri parametresiz 2 kurucu oluşturun.
+      Create 2 constructors one is with parameters, the other one is without parameter.
+      By using that constructors create at least 2 objects then print their features on the console.
+      Biri parametreli, diğeri parametresiz 2 kurucu oluşturun.
       Bu yapıcıları kullanarak en az 2 nesne oluşturun ve özelliklerini konsolda yazdırın.
      */
     String parameters ;
     int sayi;
-public Cons3(){
+   public Cons3(){
 
 }
 

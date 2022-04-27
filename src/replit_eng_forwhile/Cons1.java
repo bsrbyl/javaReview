@@ -86,14 +86,14 @@ public class Cons1 {
     private static void kelimeEkle() {
         System.out.println("eski kelimeye eklemek icin yeni bir kelime giriniz : ");
         ekleme= scan.next();
-        System.out.println("yeni kelimeyo basa mi sona mi eklemek istersiniz"+
+        System.out.println("yeni kelimeye basa mi sona mi eklemek istersiniz"+
                 "\n basa eklemek icin : 1 \nsona eklemek icin : 2");
         int tercih=scan.nextInt();
         if (tercih==1){
-            kelime=ekleme+kelime;
+            kelime=ekleme + " " +kelime;
 
         }else{
-            kelime=kelime+ekleme;
+            kelime=kelime+ " " +ekleme;
         }
         oyuncuDegistir();
         onaysor();
