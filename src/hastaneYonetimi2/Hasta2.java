@@ -1,6 +1,6 @@
 package hastaneYonetimi2;
 
-import hastaneYonetimi.HastaneMethod;
+import hastaneYonetimi2.HastaneMethod2;
 
 public class Hasta2 {
 

@@ -1,6 +1,5 @@
 package hastaneYonetimi2;
 
-import hastaneYonetimi.*;
 
 import java.util.Scanner;
 
@@ -9,14 +8,14 @@ public class HastaneMethod2 implements HastaneMethodInter2 {
 
     static Scanner scan = new Scanner(System.in);
 
-    static Hastane hastane =new Hastane();
+    static Hastane2 hastane =new Hastane2();
     public static int hastaID=106;
     static String durum="";
-    static Durum aktuelobj=new Durum();
+    static Durum2 aktuelobj=new Durum2();
 
     public static void giris (){
 
-        VeriBankasi.mapOlusturma();
+        VeriBankasi2.mapOlusturma();
         System.out.println("******YILDIZ HASTANESİ ********\n******HOSGELDİNİZ********");
         System.out.println("Kayitli hasta=> 1\nYeni kayit=>2");
         int kytSecim=scan.nextInt();
@@ -26,8 +25,8 @@ public class HastaneMethod2 implements HastaneMethodInter2 {
             System.out.println("ID numaranizi giriniz :");
             hastaID= scan.nextInt();
 
-            if (VeriBankasi.hastaListesiMap.containsKey(hastaID)){
-                System.out.println(VeriBankasi.hastaListesiMap.get(hastaID).toString());
+            if (VeriBankasi2.hastaListesiMap.containsKey(hastaID)){
+                System.out.println(VeriBankasi2.hastaListesiMap.get(hastaID).toString());
             }
          anaMenu();
 
@@ -39,7 +38,7 @@ public class HastaneMethod2 implements HastaneMethodInter2 {
 
     }
     public static void anaMenu(){
-        HastaneMethod hastaneMethodobj=new HastaneMethod();
+        HastaneMethod2 hastaneMethodobj=new HastaneMethod2();
         System.out.println("Asagidaki sikayetlerden size uygun olani seciniz ");
         System.out.println("bas agrisi : 1 \nalerji:2\n migren : 3\n soguk alginligi : 4 \ndiyabet : 5 \nkalp hastaliklari: 6 ");
         int scm=scan.nextInt();
@@ -105,7 +104,7 @@ public class HastaneMethod2 implements HastaneMethodInter2 {
 
         hastaID++;
 
-        System.out.println(VeriBankasi.hastaListesiMap);
+        System.out.println(VeriBankasi2.hastaListesiMap);
 
     }
 
@@ -116,7 +115,7 @@ public class HastaneMethod2 implements HastaneMethodInter2 {
         switch(durum){
             case "bas agrisi":
 
-                VeriBankasi.doktorListesiMap.get("Norolog");
+                VeriBankasi2.doktorListesiMap.get("Norolog");
                 break;
             case "alerji":
                 break;

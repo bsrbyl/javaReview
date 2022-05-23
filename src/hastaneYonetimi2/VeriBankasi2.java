@@ -1,7 +1,5 @@
 package hastaneYonetimi2;
 
-import hastaneYonetimi.Doktor;
-import hastaneYonetimi.Hasta;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,24 +7,24 @@ import java.util.Map;
 public class VeriBankasi2 {
     int count = 106;
 
-    static Map<Integer, Hasta> hastaListesiMap = new HashMap<>();
-    static Map<String, Doktor> doktorListesiMap = new HashMap<>();
+    static Map<Integer, Hasta2> hastaListesiMap = new HashMap<>();
+    static Map<String, Doktor2> doktorListesiMap = new HashMap<>();
 
     public static void mapOlusturma() {
 
-        Doktor doktor1 = new Doktor("Norolog", "Ali", "Can");
-        Doktor doktor2 = new Doktor("Dermatolog", "Ayse", "Yan");
-        Doktor doktor3 = new Doktor("Genel Cerrah", "Sevgi", "Kan");
-        Doktor doktor4 = new Doktor("Cocuk Doktoru", "Zeynep", "Han");
-        Doktor doktor5 = new Doktor("Dahiliye", "Busra", "Boyali");
-        Doktor doktor6 = new Doktor("Kardiyolog", "Nilufer", "Erdem");
+        Doktor2 doktor1 = new Doktor2("Norolog", "Ali", "Can");
+        Doktor2 doktor2 = new Doktor2("Dermatolog", "Ayse", "Yan");
+        Doktor2 doktor3 = new Doktor2("Genel Cerrah", "Sevgi", "Kan");
+        Doktor2 doktor4 = new Doktor2("Cocuk Doktoru", "Zeynep", "Han");
+        Doktor2 doktor5 = new Doktor2("Dahiliye", "Busra", "Boyali");
+        Doktor2 doktor6 = new Doktor2("Kardiyolog", "Nilufer", "Erdem");
 
-        Hasta hasta1 = new Hasta("Veli", "Tan", "");
-        Hasta hasta2 = new Hasta("Fatma", "Şan", "");
-        Hasta hasta3 = new Hasta("Baris", "Savas", "");
-        Hasta hasta4 = new Hasta("Aleyna", "Tan", "");
-        Hasta hasta5 = new Hasta("Nisa", "Boya", "");
-        Hasta hasta6 = new Hasta("Eda", "Serdem", "");
+        Hasta2 hasta1 = new Hasta2("Veli", "Tan", "");
+        Hasta2 hasta2 = new Hasta2("Fatma", "Şan", "");
+        Hasta2 hasta3 = new Hasta2("Baris", "Savas", "");
+        Hasta2 hasta4 = new Hasta2("Aleyna", "Tan", "");
+        Hasta2 hasta5 = new Hasta2("Nisa", "Boya", "");
+        Hasta2 hasta6 = new Hasta2("Eda", "Serdem", "");
 
         hastaListesiMap.put(100, hasta1);
         hastaListesiMap.put(101, hasta2);
