@@ -28,10 +28,9 @@ public class Q21 {
 
             }
         }
-        while (sayac< arr.length)
-            yeniarr[sayac++]=0;
+
         System.out.println(Arrays.toString(yeniarr));
-sayac=0;
+    sayac=0;
 
         for (int i = 0; i <arr2.length ; i++) {
             if (arr2[i] != 0) {
@@ -39,6 +38,7 @@ sayac=0;
 
             }
         }
+
         while (sayac< arr2.length)
             yeniarr2[sayac++]=0;
         System.out.println(Arrays.toString(yeniarr2));

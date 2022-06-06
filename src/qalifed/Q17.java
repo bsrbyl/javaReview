@@ -16,7 +16,7 @@ public class Q17 {
         int num=5;
         int sayi=1;
         for (int i = 0; i <=num ; i++) {
-            for (int j = 1; j <=num-i; j++) {
+            for (int j = sayi; j <=num-i; j++) {
                 System.out.print(j+" ");
             }
             System.out.println("");
